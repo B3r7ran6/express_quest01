@@ -34,12 +34,6 @@ const movies = [
   },
 ];
 
-const getMovies = (req, res) => {
-  res.status(200).json(movies);
-};
-
-app.get("/api/movies", getMovies);
-
 const getMovie = (req, res) => {
   const urlId = Number(req.params.theId);
   const unikMovie = movies.find((theMovie) => theMovie.id === urlId);
